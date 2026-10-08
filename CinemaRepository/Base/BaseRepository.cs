@@ -20,7 +20,7 @@ namespace CinemaRepository.Base
             _myDBContext.SaveChanges();
         }
 
-        public TypeEntity ReadbyId(int id)
+        public TypeEntity ReadById(int id)
         {
             var dbContext = _myDBContext.Set<TypeEntity>().AsQueryable();
             return dbContext.ToList().Find(x => x.Id == id);
@@ -40,7 +40,7 @@ namespace CinemaRepository.Base
 
         public void Delete(int id)
         {
-            _myDBContext.Remove(ReadbyId(id));
+            _myDBContext.Remove(ReadById(id));
             _myDBContext.SaveChanges();
         }
     }
