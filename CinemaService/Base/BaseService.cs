@@ -2,7 +2,6 @@
 using CinemaDomain.Base;
 using CinemaRepository.Base;
 using FluentValidation;
-using Microsoft.IdentityModel.Tokens.Experimental;
 
 namespace CinemaService.Base
 {
@@ -30,31 +29,31 @@ namespace CinemaService.Base
             var e = _mapper.Map<TypeEntity>(entity);
             Validate(e, Activator.CreateInstance<TypeValidator>());
             _baseRepository.Create(e);
-            var outputModel = _mapper.Map<TypeOutputModel>(e);
-            return outputModel;
+            return _mapper.Map<TypeOutputModel>(e);            
         }        
 
         public TypeOutputModel ReadById<TypeOutputModel>(int id) where TypeOutputModel : class
         {
-            throw new NotImplementedException();
+            var entity = _baseRepository.ReadById(id);
+            return _mapper.Map<TypeOutputModel>(entity);
         }
-
-        public IEnumerable<TypeOutputModel> ReadAll<TypeOutputModel>() where TypeOutputModel : class
+        public IEnumerable<TypeOutputModel> ReadAll<TypeOutputModel>() where TypeOutputModel : class 
         {
-            throw new NotImplementedException();
+            var entities = _baseRepository.ReadAll();
+            return entities.Select(e => _mapper.Map<TypeOutputModel>(e));
         }       
-
         public TypeOutputModel Update<TypeInputModel, TypeOutputModel, TypeValidator>(TypeEntity entity)
             where TypeInputModel : class
             where TypeOutputModel : class
-            where TypeValidator : AbstractValidator<TypeEntity>
+            where TypeValidator : AbstractValidator<TypeEntity> 
         {
-            throw new NotImplementedException();
+            var e = _mapper.Map<TypeEntity>(entity);
+            Validate(e, Activator.CreateInstance<TypeValidator>());
+            _baseRepository.Update(e);
+            return _mapper.Map<TypeOutputModel>(e);            
         }
-
-        public void Delete(int id)
-        {
-            throw new NotImplementedException();
+        public void Delete(int id){
+            _baseRepository.Delete(id);
         }
     }
 }
