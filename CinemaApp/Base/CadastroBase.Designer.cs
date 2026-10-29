@@ -141,6 +141,7 @@
             dataGridViewConsulta.Location = new Point(6, 6);
             dataGridViewConsulta.Name = "dataGridViewConsulta";
             dataGridViewConsulta.ReadOnly = true;
+            dataGridViewConsulta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewConsulta.Size = new Size(515, 220);
             dataGridViewConsulta.TabIndex = 5;
             // 
@@ -226,6 +227,7 @@
             Controls.Add(tabControlCadastro);
             DrawerTabControl = tabControlCadastro;
             Name = "CadastroBase";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CadastroBase";
             tabControlCadastro.ResumeLayout(false);
             tabPageCadastro.ResumeLayout(false);

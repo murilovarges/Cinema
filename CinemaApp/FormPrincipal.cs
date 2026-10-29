@@ -15,7 +15,7 @@ namespace CinemaApp
         private void gêneroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CadastroGenero cadastroGenero = ConfigureDI.ServiceProvider.GetService<CadastroGenero>();
-            cadastroGenero.MdiParent = null;
+            cadastroGenero.MdiParent = this;
             cadastroGenero.Show();
 
         }

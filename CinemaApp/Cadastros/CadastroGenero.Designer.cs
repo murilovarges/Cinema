@@ -50,11 +50,11 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Location = new Point(332, 144);
+            btnSalvar.Location = new Point(341, 144);
             // 
             // btnCancelar
             // 
-            btnCancelar.Location = new Point(228, 144);
+            btnCancelar.Location = new Point(237, 144);
             // 
             // txtId
             // 

@@ -47,8 +47,9 @@ namespace CinemaApp.Base
                                             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    var id = (int)dataGridViewConsulta.SelectedRows[0].Cells[0].Value;
+                    var id = (int)dataGridViewConsulta.SelectedRows[0].Cells["Id"].Value;
                     Deletar(id);
+                    CarregaGrid();
                 }
             }
             else
@@ -85,6 +86,7 @@ namespace CinemaApp.Base
         {
             if (dataGridViewConsulta.SelectedRows.Count > 0)
             {
+                IsEditMode = true;
                 var row = dataGridViewConsulta.SelectedRows[0];
                 CarregarRegistro(row);
                 tabControlCadastro.SelectedIndex = 0;
