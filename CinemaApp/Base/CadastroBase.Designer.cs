@@ -42,6 +42,7 @@
             btnNovo = new ReaLTaiizor.Controls.MaterialButton();
             dataGridViewConsulta = new DataGridView();
             imageListMenu = new ImageList(components);
+            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabControlCadastro.SuspendLayout();
             tabPageCadastro.SuspendLayout();
             panel1.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // tabPageCadastro
             // 
+            tabPageCadastro.Controls.Add(txtId);
             tabPageCadastro.Controls.Add(panel1);
             tabPageCadastro.ImageKey = "register.png";
             tabPageCadastro.Location = new Point(4, 24);
@@ -242,6 +244,37 @@
             imageListMenu.Images.SetKeyName(0, "find.png");
             imageListMenu.Images.SetKeyName(1, "register.png");
             // 
+            // txtId
+            // 
+            txtId.AnimateReadOnly = false;
+            txtId.AutoCompleteMode = AutoCompleteMode.None;
+            txtId.AutoCompleteSource = AutoCompleteSource.None;
+            txtId.BackgroundImageLayout = ImageLayout.None;
+            txtId.CharacterCasing = CharacterCasing.Normal;
+            txtId.Depth = 0;
+            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
+            txtId.HideSelection = true;
+            txtId.Hint = "Id";
+            txtId.LeadingIcon = null;
+            txtId.Location = new Point(18, 16);
+            txtId.MaxLength = 32767;
+            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
+            txtId.Name = "txtId";
+            txtId.PasswordChar = '\0';
+            txtId.PrefixSuffixText = null;
+            txtId.ReadOnly = true;
+            txtId.RightToLeft = RightToLeft.No;
+            txtId.SelectedText = "";
+            txtId.SelectionLength = 0;
+            txtId.SelectionStart = 0;
+            txtId.ShortcutsEnabled = true;
+            txtId.Size = new Size(78, 48);
+            txtId.TabIndex = 3;
+            txtId.TabStop = false;
+            txtId.TextAlign = HorizontalAlignment.Left;
+            txtId.TrailingIcon = null;
+            txtId.UseSystemPasswordChar = false;
+            // 
             // CadastroBase
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -276,5 +309,6 @@
         private ReaLTaiizor.Controls.MaterialButton btnNovo;
         private ReaLTaiizor.Controls.MaterialButton btnSalvar;
         private ReaLTaiizor.Controls.MaterialButton btnCancelar;
+        protected ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
     }
 }

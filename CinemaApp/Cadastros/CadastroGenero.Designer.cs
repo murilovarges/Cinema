@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txtId = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             txtNome = new ReaLTaiizor.Controls.MaterialTextBoxEdit();
             tabPageCadastro.SuspendLayout();
             tabControlCadastro.SuspendLayout();
@@ -37,40 +36,8 @@
             // tabPageCadastro
             // 
             tabPageCadastro.Controls.Add(txtNome);
-            tabPageCadastro.Controls.Add(txtId);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtNome, 0);
-            // 
-            // txtId
-            // 
-            txtId.AnimateReadOnly = false;
-            txtId.AutoCompleteMode = AutoCompleteMode.None;
-            txtId.AutoCompleteSource = AutoCompleteSource.None;
-            txtId.BackgroundImageLayout = ImageLayout.None;
-            txtId.CharacterCasing = CharacterCasing.Normal;
-            txtId.Depth = 0;
-            txtId.Font = new Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel);
-            txtId.HideSelection = true;
-            txtId.Hint = "Id";
-            txtId.LeadingIcon = null;
-            txtId.Location = new Point(22, 34);
-            txtId.MaxLength = 32767;
-            txtId.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
-            txtId.Name = "txtId";
-            txtId.PasswordChar = '\0';
-            txtId.PrefixSuffixText = null;
-            txtId.ReadOnly = false;
-            txtId.RightToLeft = RightToLeft.No;
-            txtId.SelectedText = "";
-            txtId.SelectionLength = 0;
-            txtId.SelectionStart = 0;
-            txtId.ShortcutsEnabled = true;
-            txtId.Size = new Size(78, 48);
-            txtId.TabIndex = 2;
-            txtId.TabStop = false;
-            txtId.TextAlign = HorizontalAlignment.Left;
-            txtId.TrailingIcon = null;
-            txtId.UseSystemPasswordChar = false;
             // 
             // txtNome
             // 
@@ -84,7 +51,7 @@
             txtNome.HideSelection = true;
             txtNome.Hint = "Nome";
             txtNome.LeadingIcon = null;
-            txtNome.Location = new Point(22, 103);
+            txtNome.Location = new Point(22, 99);
             txtNome.MaxLength = 32767;
             txtNome.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.OUT;
             txtNome.Name = "txtNome";
@@ -117,8 +84,6 @@
         }
 
         #endregion
-
-        private ReaLTaiizor.Controls.MaterialTextBoxEdit txtId;
         private ReaLTaiizor.Controls.MaterialTextBoxEdit txtNome;
     }
 }

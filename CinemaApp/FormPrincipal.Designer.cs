@@ -67,6 +67,7 @@
             filmeToolStripMenuItem.Name = "filmeToolStripMenuItem";
             filmeToolStripMenuItem.Size = new Size(180, 22);
             filmeToolStripMenuItem.Text = "Filme";
+            filmeToolStripMenuItem.Click += filmeToolStripMenuItem_Click;
             // 
             // salaToolStripMenuItem
             // 
