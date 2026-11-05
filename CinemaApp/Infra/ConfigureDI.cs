@@ -58,9 +58,10 @@ namespace CinemaApp.Infra
             #endregion
 
             #region Injeção de Dependência de Formulários
-            Services.AddTransient<CadastroGenero,CadastroGenero>();
-            Services.AddTransient<CadastroFilme, CadastroFilme>();
-            Services.AddTransient<CadastroSala, CadastroSala>();
+            Services.AddTransient<CadastroGenero>();
+            Services.AddTransient<CadastroFilme>();
+            Services.AddTransient<CadastroSala>();
+            Services.AddTransient<CadastroSessao>();
             #endregion
 
             ServiceProvider = Services.BuildServiceProvider();

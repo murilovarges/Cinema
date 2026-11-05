@@ -44,5 +44,10 @@ namespace CinemaApp
         {
             ExibeFormulario<CadastroSala>();
         }
+
+        private void sessãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroSessao>();
+        }
     }
 }
