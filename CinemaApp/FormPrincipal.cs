@@ -13,25 +13,36 @@ namespace CinemaApp
         }
         private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (e.CloseReason == CloseReason.ApplicationExitCall){
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
                 e.Cancel = true;
             }
         }
         private void ExibeFormulario<TFormulario>() where TFormulario : Form
         {
             var cad = ConfigureDI.ServiceProvider!.GetService<TFormulario>();
-            if (cad != null && !cad.IsDisposed){
+            if (cad != null && !cad.IsDisposed)
+            {
                 cad.MdiParent = this;
                 cad.Show();
-            }else{
+            }
+            else
+            {
                 MessageBox.Show($"Não foi possível abrir o formulário {typeof(TFormulario).Name}.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void filmeToolStripMenuItem_Click(object sender, EventArgs e){
+        private void filmeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             ExibeFormulario<CadastroFilme>();
         }
-        private void gêneroToolStripMenuItem_Click(object sender, EventArgs e){
+        private void gêneroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             ExibeFormulario<CadastroGenero>();
+        }
+
+        private void salaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExibeFormulario<CadastroSala>();
         }
     }
 }

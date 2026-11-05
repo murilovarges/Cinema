@@ -3,6 +3,8 @@ namespace CinemaApp.Models;
 public class SalaViewModel
 {
     public int Id { get; set; }
-    public string Nome { get; set; } = string.Empty;
+    public int Numero{ get; set; } 
     public int Capacidade { get; set; }
+    public int Fileiras { get; set; }
+    public int Assentos { get; set; }
 }
