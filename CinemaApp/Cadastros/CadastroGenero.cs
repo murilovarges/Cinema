@@ -2,7 +2,6 @@
 using CinemaDomain;
 using CinemaService.Base;
 using CinemaService.Validators;
-using System.Configuration;
 
 namespace CinemaApp.Cadastros
 {

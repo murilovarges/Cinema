@@ -38,23 +38,13 @@
             // 
             tabPageCadastro.Controls.Add(txtNome);
             tabPageCadastro.Controls.Add(txtId);
-            tabPageCadastro.Size = new Size(424, 189);
-            tabPageCadastro.Controls.SetChildIndex(btnCancelar, 0);
-            tabPageCadastro.Controls.SetChildIndex(btnSalvar, 0);
+            tabPageCadastro.Size = new Size(438, 219);
             tabPageCadastro.Controls.SetChildIndex(txtId, 0);
             tabPageCadastro.Controls.SetChildIndex(txtNome, 0);
             // 
             // tabControlCadastro
             // 
-            tabControlCadastro.Size = new Size(432, 217);
-            // 
-            // btnSalvar
-            // 
-            btnSalvar.Location = new Point(341, 144);
-            // 
-            // btnCancelar
-            // 
-            btnCancelar.Location = new Point(237, 144);
+            tabControlCadastro.Size = new Size(446, 247);
             // 
             // txtId
             // 
@@ -122,12 +112,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(438, 284);
+            ClientSize = new Size(452, 314);
             Location = new Point(0, 0);
             Name = "CadastroGenero";
             Text = "CadastroGenero";
             tabPageCadastro.ResumeLayout(false);
-            tabPageCadastro.PerformLayout();
             tabControlCadastro.ResumeLayout(false);
             ResumeLayout(false);
         }
