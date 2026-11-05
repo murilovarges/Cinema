@@ -104,6 +104,7 @@
             Name = "FormPrincipal";
             Text = "Sistema de Gerencimento de Cinemas";
             WindowState = FormWindowState.Maximized;
+            FormClosing += FormPrincipal_FormClosing;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

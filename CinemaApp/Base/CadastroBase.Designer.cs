@@ -232,6 +232,7 @@
             dataGridViewConsulta.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewConsulta.Size = new Size(496, 257);
             dataGridViewConsulta.TabIndex = 5;
+            dataGridViewConsulta.MouseDoubleClick += dataGridViewConsulta_MouseDoubleClick;
             // 
             // imageListMenu
             // 

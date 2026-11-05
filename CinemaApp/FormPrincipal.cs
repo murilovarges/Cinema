@@ -17,7 +17,14 @@ namespace CinemaApp
             CadastroGenero cadastroGenero = ConfigureDI.ServiceProvider.GetService<CadastroGenero>();
             cadastroGenero.MdiParent = this;
             cadastroGenero.Show();
+        }
 
+        private void FormPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.ApplicationExitCall)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

@@ -63,6 +63,11 @@ namespace CinemaApp.Base
         {
             CarregaGrid();
         }
+
+        private void dataGridViewConsulta_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            Editar();
+        }
         #endregion
 
         #region Métodos
@@ -94,8 +99,7 @@ namespace CinemaApp.Base
             }
             else
             {
-                MessageBox.Show("Selecione um registro para editar!", "Editar",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Selecione um registro para editar!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         protected virtual void Deletar(int id)
@@ -119,7 +123,6 @@ namespace CinemaApp.Base
             }
         }
         #endregion
-
-        
+             
     }
 }
