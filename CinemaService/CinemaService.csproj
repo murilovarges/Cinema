@@ -1,4 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<!-- Projeto CinemaApp By Murilo Varges -->
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -17,3 +18,4 @@
   </ItemGroup>
 
 </Project>
+<!-- Projeto CinemaApp By Murilo Varges -->
