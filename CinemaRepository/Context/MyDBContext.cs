@@ -15,7 +15,8 @@ namespace CinemaRepository.Context
 
         public MyDBContext(DbContextOptions<MyDBContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            Database.EnsureCreated();            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
