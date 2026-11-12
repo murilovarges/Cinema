@@ -6,7 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ifsp_icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="ifsp_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ReaLTaiizor" Version="3.8.2.1" />

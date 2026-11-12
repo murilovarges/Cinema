@@ -112,9 +112,9 @@
             // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.Controls.Add(btnSalvar);
             panel1.Controls.Add(btnCancelar);
+            panel1.Dock = DockStyle.Bottom;
             panel1.Location = new Point(3, 251);
             panel1.Name = "panel1";
             panel1.Size = new Size(480, 51);
@@ -172,7 +172,7 @@
             tabPageConsulta.Location = new Point(4, 24);
             tabPageConsulta.Name = "tabPageConsulta";
             tabPageConsulta.Padding = new Padding(3);
-            tabPageConsulta.Size = new Size(509, 317);
+            tabPageConsulta.Size = new Size(486, 305);
             tabPageConsulta.TabIndex = 1;
             tabPageConsulta.Text = "Consulta";
             tabPageConsulta.UseVisualStyleBackColor = true;
@@ -180,13 +180,13 @@
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.Controls.Add(btnExcluir);
             panel2.Controls.Add(btnEditar);
             panel2.Controls.Add(btnNovo);
-            panel2.Location = new Point(3, 267);
+            panel2.Dock = DockStyle.Bottom;
+            panel2.Location = new Point(3, 255);
             panel2.Name = "panel2";
-            panel2.Size = new Size(503, 47);
+            panel2.Size = new Size(480, 47);
             panel2.TabIndex = 6;
             // 
             // btnExcluir
@@ -198,7 +198,7 @@
             btnExcluir.HighEmphasis = true;
             btnExcluir.Icon = null;
             btnExcluir.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnExcluir.Location = new Point(419, 8);
+            btnExcluir.Location = new Point(396, 8);
             btnExcluir.Margin = new Padding(4, 6, 4, 6);
             btnExcluir.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnExcluir.Name = "btnExcluir";
@@ -220,7 +220,7 @@
             btnEditar.HighEmphasis = true;
             btnEditar.Icon = null;
             btnEditar.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnEditar.Location = new Point(340, 8);
+            btnEditar.Location = new Point(317, 8);
             btnEditar.Margin = new Padding(4, 6, 4, 6);
             btnEditar.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnEditar.Name = "btnEditar";
@@ -242,7 +242,7 @@
             btnNovo.HighEmphasis = true;
             btnNovo.Icon = null;
             btnNovo.IconType = ReaLTaiizor.Controls.MaterialButton.MaterialIconType.Rebase;
-            btnNovo.Location = new Point(268, 8);
+            btnNovo.Location = new Point(245, 8);
             btnNovo.Margin = new Padding(4, 6, 4, 6);
             btnNovo.MouseState = ReaLTaiizor.Helper.MaterialDrawHelper.MaterialMouseState.HOVER;
             btnNovo.Name = "btnNovo";
@@ -282,6 +282,7 @@
             ClientSize = new Size(500, 400);
             Controls.Add(tabControlCadastro);
             DrawerTabControl = tabControlCadastro;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(500, 400);
             Name = "CadastroBase";
             StartPosition = FormStartPosition.CenterScreen;

@@ -44,13 +44,29 @@ namespace CinemaApp.Infra
             var mapperConfig = new MapperConfiguration(config =>
             {
                 config.CreateMap<Genero, GeneroViewModel>().ReverseMap();
+                
                 config.CreateMap<Filme, FilmeViewModel>()
                     .ForMember(dest => dest.GeneroId, opt => opt.MapFrom(src => src.Genero.Id))
-                    .ForMember(dest => dest.GeneroNome, opt => opt.MapFrom(src => src.Genero.Nome));
+                    .ForMember(dest => dest.GeneroNome, opt => opt.MapFrom(src => src.Genero.Nome))
+                    .ReverseMap();
+                
                 config.CreateMap<Sala, SalaViewModel>().ReverseMap();
-                config.CreateMap<Sessao, SessaoViewModel>().ReverseMap();
-                config.CreateMap<Ingresso, IngressoViewModel>().ReverseMap();
+                
+                config.CreateMap<Sessao, SessaoViewModel>()
+                    .ForMember(dest => dest.FilmeId, opt => opt.MapFrom(src => src.Filme.Id))
+                    .ForMember(dest => dest.FilmeNome, opt => opt.MapFrom(src => src.Filme.Nome))
+                    .ForMember(dest => dest.SalaId, opt => opt.MapFrom(src => src.Sala.Id))
+                    .ForMember(dest => dest.Classificacao, opt => opt.MapFrom(src => src.Filme.Classificacao))
+                    .ReverseMap();
+                    
+
+                config.CreateMap<Ingresso, IngressoViewModel>()
+                    .ForMember(dest => dest.Filme, opt => opt.MapFrom(src => src.Sessao.Filme.Nome))
+                    .ForMember(dest => dest.Classificacao, opt => opt.MapFrom(src => src.Sessao.Filme.Classificacao))
+                    .ReverseMap();
+                
                 config.CreateMap<IngressoItem, IngressoItemViewModel>().ReverseMap();
+
             },NullLoggerFactory.Instance);
 
             Services.AddSingleton(mapperConfig.CreateMapper());
@@ -62,6 +78,7 @@ namespace CinemaApp.Infra
             Services.AddTransient<CadastroFilme>();
             Services.AddTransient<CadastroSala>();
             Services.AddTransient<CadastroSessao>();
+            Services.AddTransient<CadastroIngresso>();
             #endregion
 
             ServiceProvider = Services.BuildServiceProvider();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             menuStrip1 = new MenuStrip();
             cadastrosToolStripMenuItem = new ToolStripMenuItem();
             gêneroToolStripMenuItem = new ToolStripMenuItem();
@@ -58,28 +59,28 @@
             // gêneroToolStripMenuItem
             // 
             gêneroToolStripMenuItem.Name = "gêneroToolStripMenuItem";
-            gêneroToolStripMenuItem.Size = new Size(180, 22);
+            gêneroToolStripMenuItem.Size = new Size(112, 22);
             gêneroToolStripMenuItem.Text = "Gênero";
             gêneroToolStripMenuItem.Click += gêneroToolStripMenuItem_Click;
             // 
             // filmeToolStripMenuItem
             // 
             filmeToolStripMenuItem.Name = "filmeToolStripMenuItem";
-            filmeToolStripMenuItem.Size = new Size(180, 22);
+            filmeToolStripMenuItem.Size = new Size(112, 22);
             filmeToolStripMenuItem.Text = "Filme";
             filmeToolStripMenuItem.Click += filmeToolStripMenuItem_Click;
             // 
             // salaToolStripMenuItem
             // 
             salaToolStripMenuItem.Name = "salaToolStripMenuItem";
-            salaToolStripMenuItem.Size = new Size(180, 22);
+            salaToolStripMenuItem.Size = new Size(112, 22);
             salaToolStripMenuItem.Text = "Sala";
             salaToolStripMenuItem.Click += salaToolStripMenuItem_Click;
             // 
             // sessãoToolStripMenuItem
             // 
             sessãoToolStripMenuItem.Name = "sessãoToolStripMenuItem";
-            sessãoToolStripMenuItem.Size = new Size(180, 22);
+            sessãoToolStripMenuItem.Size = new Size(112, 22);
             sessãoToolStripMenuItem.Text = "Sessão";
             sessãoToolStripMenuItem.Click += sessãoToolStripMenuItem_Click;
             // 
@@ -95,6 +96,7 @@
             ingressoToolStripMenuItem.Name = "ingressoToolStripMenuItem";
             ingressoToolStripMenuItem.Size = new Size(118, 22);
             ingressoToolStripMenuItem.Text = "Ingresso";
+            ingressoToolStripMenuItem.Click += ingressoToolStripMenuItem_Click;
             // 
             // FormPrincipal
             // 
@@ -102,6 +104,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 356);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             IsMdiContainer = true;
             MainMenuStrip = menuStrip1;
             Name = "FormPrincipal";
